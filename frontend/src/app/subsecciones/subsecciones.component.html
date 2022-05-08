@@ -1,0 +1,22 @@
+  <div>
+    <h3>subsection</h3> 
+    <button class="btn" style ="float:right;cursor: pointer;" (click)="mostrarTextArea()">Editar</button>
+  </div>
+
+
+  <p id="parrafo-1">{{parrafo1}}</p>
+
+  <textarea name="textarea-1" id="textarea-1" cols="30" rows="10" [ngStyle]="{'display':visible, 'width':'100%'}" (focusout)="ocultarTextArea()" 
+        [(ngModel)]="parrafo1">
+  </textarea>
+      
+  <!--Recorre todas las subsecciones recibidas y muestra el texto formateado en html-->
+  <section *ngFor="let art of articulos" >
+    <section *ngFor="let sub of art.subsecciones">
+      <h3>{{sub.tituloSub}}</h3>      
+      <p>{{sub.textoSub}}</p> 
+    </section>  
+  </section>
+  
+
+  

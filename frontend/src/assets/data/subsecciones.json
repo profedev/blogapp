@@ -1,0 +1,19 @@
+[
+    {
+        "idArt": 1,
+        "tituloArt": "Article heading",
+        "textoArt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.",
+        "subsecciones": [
+            {
+                "idSub": 1,
+                "tituloSub": "Subsection",
+                "textoSub": "Donzxzec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pelientesque auctor nisi id magna consequat sagittis. "
+            },
+            {
+                "idSub": 2,
+                "tituloSub": "Another subsection",
+                "textoSub": "Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est."
+            }
+        ]
+    }
+]
