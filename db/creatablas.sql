@@ -10,12 +10,20 @@ CREATE TABLE articulos (
 CREATE TABLE subsecciones (
   idSub int NOT NULL,
   tituloSub varchar(45) DEFAULT NULL,
-  textoSub varchar(500Art) DEFAULT NULL,
+  textoSub varchar(500) DEFAULT NULL,
   articulo int DEFAULT NULL,
   PRIMARY KEY (idSub),
   KEY articulo_idx (articulo),
   CONSTRAINT articulo FOREIGN KEY (articulo) REFERENCES articulos (idArt)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE usuarios (
+  idUsu INT NOT NULL,
+  nombreUsu VARCHAR(45) NULL,
+  passUsu VARCHAR(45) NULL,
+  PRIMARY KEY (idUsu)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  
 
 -- Carga las tablas
 insert into articulos 
@@ -26,3 +34,6 @@ values(1,'Subsection','Donzxzec ut librero sed accu vehicula ultricies a non tor
 
 insert into subsecciones
 values(2,'Another subsection','Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.',1);
+
+INSERT INTO usuarios 
+VALUES (1,'faguirre','password');
