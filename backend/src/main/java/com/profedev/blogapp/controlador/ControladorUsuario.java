@@ -25,10 +25,11 @@ public class ControladorUsuario {
     public Usuario login(@RequestParam("user") String username, @RequestParam("password") String pwd) {
 
         DaoUsuarioDb db = new DaoUsuarioDb();
-
+        // Controla que exista un usuario y el password correspondiente
         Usuario user = db.getUserByNombreUsuario(username);
         if(user!=null){
             if (user.getPassUsu().equals(pwd)){
+                // Si el usuario es válido genera el token
                 String token = getJWTToken(username);
                 user.setNombreUsu(username);
                 user.setToken(token);
@@ -37,7 +38,7 @@ public class ControladorUsuario {
         return user;
     }
 
-    //Método que construye el token, delegando en la clase de utilidad Jwts que incluye información sobre su expiración y un objeto de
+    // Método que construye el token, delegando en la clase de utilidad Jwts que incluye información sobre su expiración y un objeto de
     // GrantedAuthority de Spring que usaremos para autorizar las peticiones a los recursos protegidos.
     private String getJWTToken(String username) {
         String secretKey = "mySecretKey";
