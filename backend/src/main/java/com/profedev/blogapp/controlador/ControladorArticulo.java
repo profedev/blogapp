@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.*;
  * @author faguirre
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("api")
 public class ControladorArticulo {
     Dao daoArticulo = new DaoArticuloDb();
 
-    @PostMapping("/nuevoArticulo")
+    @PostMapping("nuevoArticulo")
     public String nuevoArticulo(@RequestBody Articulo unArticulo){
         String msg = "Falló actualización";
         if (this.daoArticulo.save(unArticulo)) msg = "Actualización exitosa" ;
@@ -28,8 +28,8 @@ public class ControladorArticulo {
     }  
     
     //Método que devuelve una lista de artículos
-    @CrossOrigin(origins = "http://localhost:4200") //Habilita CORS desde esa URL
-    @GetMapping("/getArticulos")
+    //@CrossOrigin(origins = "http://localhost:4200") //Habilita CORS desde esa URL
+    @GetMapping("getArticulos")
     @ResponseBody
     public List<Articulo> getArticulos(){
 
